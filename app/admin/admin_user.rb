@@ -1,7 +1,7 @@
 ActiveAdmin.register AdminUser do     
   index do                            
     column "E-posta",:email                     
-    column "Şuanki girişi",:current_sign_in_at        
+    column "Şu anki girişi",:current_sign_in_at        
     column "Son giriş",:last_sign_in_at           
     column "Giriş yapma sayısı",:sign_in_count             
     default_actions                   
