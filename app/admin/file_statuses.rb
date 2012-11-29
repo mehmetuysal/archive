@@ -1,3 +1,4 @@
+# encoding: UTF-8
 ActiveAdmin.register FileStatus do
     menu :label => "Döküman Durumları"
     config.filters = false

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 ActiveAdmin.register FileType do
     menu :label => "Döküman Tipleri"
 

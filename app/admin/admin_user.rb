@@ -1,3 +1,4 @@
+# encoding: UTF-8
 ActiveAdmin.register AdminUser do     
   index do                            
     column "E-posta",:email                     
