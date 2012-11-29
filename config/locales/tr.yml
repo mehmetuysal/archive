@@ -1,4 +1,53 @@
 tr:
+  views:
+    pagination:
+      next: Sonraki
+      previous: Önceki
+      last: Son
+      first: İlk
+  formtastic:
+    :yes: 'Evet'
+    :no: 'Hayır'
+    :create: 'Yeni %{model}'
+    :update: 'Güncelle %{model}'
+    :submit: 'Gönder %{model}'
+    :cancel: 'Vazgeç %{model}'
+    :reset: 'Temizle %{model}'
+    :required: 'zorunlu'
+  activerecord:
+    models:
+      branch:
+        one: Şube
+        other: Şubeler
+      unit:
+        one: Birim
+        other: Birimler
+      file_type:
+        one: Döküman Tipi
+        other: Döküman Tipleri
+      file_status:
+        one: Döküman Durumu
+        other: Döküman Durumları              
+      admin_user:
+        one: Kullanıcı
+        other: Kullanıcılar
+      document:
+        one: Döküman
+        other: Dökümanlar
+    errors:
+      models:
+        document:
+          attributes:
+            file_status_id:
+              blank: Bu alanı boş bırakamazsınız
+            branch_id:
+              blank: Bu alanı boş bırakamazsınız
+            unit_id:
+              blank: Bu alanı boş bırakamazsınız 
+            document_name:
+              blank: Bu alanı boş bırakamazsınız     
+            file_type_id:
+              blank: Bu alanı boş bırakamazsınız                                                  
   time:
     formats:
       default: "%d-%m-%Y"
@@ -13,7 +62,7 @@ tr:
     models:
       document:
         one: Döküman  
-    dashboard: "Kontrol Paneli"
+    dashboard: "Ana Sayfa"
     dashboard_welcome:
       welcome: "Active Admin'e Hoşgeldiniz. Burası öntanımlı Kontrol Paneli sayfasıdır."
       call_to_action: "Kontrol Paneline bölümler eklemek için 'app/admin/dashboards.rb' dosyasına bakabilirsin."
@@ -23,9 +72,10 @@ tr:
     delete_confirmation: "Bu kaydı silmek istediğine emin misin?"
     new_model: "Yeni %{model}"
     create_model: "Yeni %{model}"
-    edit_model: "%{model} modelini düzenle"
-    update_model: "%{model} modelini düzenle"
-    delete_model: "%{model} modelini sil"
+    create: Yeni
+    edit_model: "%{model} düzenle"
+    update_model: "%{model} düzenle"
+    delete_model: "%{model} sil"
     details: "%{model} ayrıntıları"
     cancel: "İptal"
     empty: "Boş"
@@ -47,7 +97,7 @@ tr:
     pagination:
       empty: "%{model} boş"
       one: "<b>1</b> %{model} kaydı görüntüleniyor"
-      one_page: "<b>%{n}</b> kayıt %{model} modelinde görüntüleniyor"
+      one_page: "<b>%{n}</b> kayıt %{model}  görüntüleniyor"
       multiple: "%{model} toplam %{total} kayıt bulundu. <b>%{from} ile %{to} arası</b> arası görüntüleniyor"
       entry:
         one: "Girdi"
@@ -61,7 +111,7 @@ tr:
       delete_confirmation: "Kayıtlarını silmek istediğinize emin misiniz? Dikkat bu işlemin geri dönüşü yoktur!"
       succesfully_destroyed:
         one: "1 %{model} kaydı başarıyla silindi."
-        other: "Toplam %{count} kayıt %{singular_model} modelinden silindi"
+        other: "Toplam %{count} kayıt %{singular_model} silindi"
       selection_toggle_explanation: "Seçimi Değiştir"
       link: "Ekle"
       action_label: "%{title} Seçildi"
@@ -88,6 +138,9 @@ tr:
       change_password:
         title: "Şifrenizi değiştirin"
         submit: "Şifremi değiştir"
+      failure:
+        admin_user:
+          invalid: Lütfen geçerli bilgilerinizi giriniz
       links:
         sign_in: "Oturum aç"
         forgot_your_password: "Şifreni mi unuttun?"

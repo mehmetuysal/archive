@@ -1,9 +1,9 @@
 ActiveAdmin.register AdminUser do     
   index do                            
-    column :email                     
-    column :current_sign_in_at        
-    column :last_sign_in_at           
-    column :sign_in_count             
+    column "E-posta",:email                     
+    column "Şuanki girişi",:current_sign_in_at        
+    column "Son giriş",:last_sign_in_at           
+    column "Giriş yapma sayısı",:sign_in_count             
     default_actions                   
   end                                 
 
@@ -12,10 +12,10 @@ ActiveAdmin.register AdminUser do
       menu :label => "Kullanıcılar" , :priority => 10
 
   form do |f|                         
-    f.inputs "Admin Details" do       
-      f.input :email                  
-      f.input :password               
-      f.input :password_confirmation  
+    f.inputs "Kullanıcı Detayı" do       
+      f.input :email,   :label=> "E-posta"               
+      f.input :password ,:label=> "Şifre"             
+      f.input :password_confirmation  ,:label=> "Şifre tekrar"
     end                               
     f.buttons                         
   end                                 

@@ -11,4 +11,24 @@ ActiveAdmin.register Unit do
   end    
     menu :label => "Birimler", :priority => 3
      config.filters = false
+
+    form do |f|
+      f.inputs "Genel Bilgiler" do
+        f.input :name, :label=> "Birim Adı"
+        f.input :location, :label => "Lokasyon"
+        f.input :user, :label=> "Sorumlu"
+        f.input :description, :label => "Açıklama"        
+      end
+      f.buttons
+    end   
+
+    show do |unit|
+      attributes_table do
+        row("Birim Adı") {unit.name}
+        row("Sorumlu") { unit.user }
+        row("Lokasyon") { unit.location }   
+        row("Açıklama") { unit.description }
+      end
+      active_admin_comments
+    end         
 end
