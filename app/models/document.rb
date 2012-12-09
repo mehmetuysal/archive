@@ -1,5 +1,5 @@
 class Document < ActiveRecord::Base
-  attr_accessible :unit_id , :branch_id, :date, :document_name, :file_type_id, :archive_no, :file_status_id, :file_no, :description, :destruction_date, :decisiton, :process
+  attr_accessible :unit_id , :branch_id, :date, :document_name, :file_type_id, :archive_no, :file_status_id, :file_no, :description, :destruction_date, :decisiton, :process, :shelf_no, :end_date
   belongs_to :unit
   belongs_to :branch
   belongs_to :file_status

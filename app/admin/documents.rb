@@ -9,7 +9,10 @@ ActiveAdmin.register Document do
       	filter :document_name, :label => "Döküman Adı"
         filter :file_type, :label => "Dosya Tipi"      	
       	filter :file_no, :label => "Dosya No"
-      	filter :date, :label => "Tarih"      	
+        filter :archive_no, :label => "Arşiv No"
+        filter :shelf_no, :label => "Raf No"
+      	filter :date, :label => "Tarih"  
+        filter :end_date, :label => "Son Tarih"      	
       	filter :description, :label => "Açıklama"
         filter :destruction_date, :label => "İmha Tarihi"
 
@@ -20,8 +23,8 @@ ActiveAdmin.register Document do
     end
     column "Döküman Adı", :document_name            
     column "Arşiv No",:archive_no        
-    column "Döküman No",:file_no           
-    column "Açıklama",:description             
+    column "Dosya No",:file_no           
+    column "Raf No",:shelf_no
     default_actions                   
   end    
 
@@ -37,8 +40,11 @@ ActiveAdmin.register Document do
       f.inputs "Detay" do
       	f.input :document_name, :label => "Döküman Adı"
         f.input :file_type, :label => "Döküman Tipi"      	
-      	f.input :file_no, :label => "Döküman No"
+      	f.input :file_no, :label => "Dosya No"
       	f.input :date, :as=>:datepicker, :label => "Tarih"      	
+        f.input :end_date, :as=>:datepicker, :label => "Son Tarih"   
+        f.input :archive_no, :label => "Arşiv No"
+        f.input :shelf_no, :label => "Raf No"
       	f.input :description, :label => "Açıklama"
       end      
       f.inputs "İmha" do
@@ -61,8 +67,11 @@ ActiveAdmin.register Document do
             attributes_table do
                 row("Döküman Durumu") {document.document_name}
                 row("Döküman Tipi") {document.file_type}
-                row("Döküman No") {document.file_no}
+                row("Dosya No") {document.file_no}
                 row("Tarih") {document.date}
+                row("Son Tarih") {document.end_date}
+                row("Arşiv No") {document.archive_no}
+                row("Raf No") {document.shelf_no}
                 row("Açıklama") {document.description} 
             end
             attributes_table do

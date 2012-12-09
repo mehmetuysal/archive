@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   before_filter :set_user_language
 
   def set_user_language
-  	I18n.locale = :tr
+  	I18n.locale = :tr_new
   end
 end

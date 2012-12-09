@@ -1,4 +1,4 @@
-tr:
+tr_new:
   views:
     pagination:
       next: Sonraki
@@ -8,8 +8,8 @@ tr:
   formtastic:
     :yes: 'Evet'
     :no: 'Hayır'
-    :create: 'Yeni %{model}'
-    :update: 'Güncelle %{model}'
+    :create: 'Kaydet'
+    :update: 'Güncelle'
     :submit: 'Gönder %{model}'
     :cancel: 'Vazgeç %{model}'
     :reset: 'Temizle %{model}'
@@ -84,7 +84,7 @@ tr:
     download: "İndir:"
     has_many_new: "Yeni %{model} kaydı ekle"
     has_many_delete: "Sil"
-    filter: "Filtrele"
+    filter: "Ara"
     clear_filters: "Filtreleri Temizle"
     search_field: "%{field} alanında ara"
     equal_to: "Eşittir"
@@ -93,7 +93,7 @@ tr:
     main_content: "İçeriği görüntülemek için lütfen %{model}#main_content metodunu ekleyin."
     logout: "Oturumu Sonlandır"
     sidebars:
-      filters: "Filtreler"
+      filters: "Döküman Ara"
     pagination:
       empty: "%{model} boş"
       one: "<b>1</b> %{model} kaydı görüntüleniyor"
